@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: start;
+
+  * {
+    fill: $basicColor;
+    transition: color 200ms linear, fill 200ms linear;
+  }
+
+  > svg {
+    width: 191px;
+  }
+
+  &__descr {
+    margin-top: 6px;
+    font-family: 'TT Firs Neue';
+    font-size: 14px;
+    line-height: 18px;
+    color: #E9E9E9;
+  }
+
+  &:focus {
+    outline: 3px solid $hoverColor2;
+  }
+
+  &:hover {
+    * {
+      color: $hoverColor1;
+      fill: $hoverColor1;
+    }
+  }
+}

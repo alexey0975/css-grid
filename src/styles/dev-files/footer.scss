@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+.footer {
+  padding: 25px 0 16px;
+  color: #cacaca;
+  background-color: $secondaryColor;
+
+  &__left {
+    justify-self: start;
+  }
+}

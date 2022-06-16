@@ -1,0 +1,43 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__descr {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #999999;
+  }
+
+  &__field {
+    padding: 16px 23px;
+    border: none;
+    background-color: #E9E9E9;
+    margin-bottom: 19px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $secondaryColor;
+
+    &::placeholder {
+      color: #999999;
+    }
+
+    &:focus::placeholder {
+      color: #999999;
+    }
+
+    &_area {
+      height: 150px;
+      resize: none;
+    }
+  }
+
+  &__submit {
+    align-self: flex-start;
+  }
+
+}

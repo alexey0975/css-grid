@@ -1,0 +1,272 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title High Pass
+    link(rel="shortcut icon", href="images/icon.png", type="image/png")
+    link(rel="preload", href="fonts/roboto-v29-latin_cyrillic-700.woff2", as="font")
+    link(rel="preload", href="fonts/roboto-v29-latin_cyrillic-regular.woff2", as="font")
+    link(rel="preload", href="fonts/TTFirsNeue-Bold.woff2", as="font")
+    link(rel="preload", href="fonts/TTFirsNeue-Regular.woff2", as="font")
+    link(rel="stylesheet", href="styles/style.css")
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp")
+    script(src="script/app.js" defer)
+  body
+    header.header
+      .container.grid.grid_header
+        a.logo.grid_header__logo(href="#")
+          svg(height="31" viewbox="0 0 191 31")
+            use(xlink:href="images/sprite.svg#logo")
+        nav.nav.grid_header__nav
+          button.btn.burger
+            span.burger__line
+            span.burger__line
+            span.burger__line
+          .nav__links
+            ul.nav__list
+              li.nav__item
+                a.nav__link(href="#about-us") О студии
+              li.nav__item
+                a.nav__link(href="#projects") Наши проекты
+              li.nav__item
+                a.nav__link(href="#") Услуги
+              li.nav__item
+                a.nav__link(href="#master-class") Мастер-классы
+              li.nav__item
+                a.nav__link(href="#contacts") Контакты
+            a.tel.nav__tel(href="tel:+749542423532")
+              span.tel__img
+                svg(width="18" height="18" viewbox="0 0 18 18")
+                  use(xlink:href="images/sprite.svg#phone")
+              span.tel__number +7 (495) 42-423-532
+        .search.grid_header__search
+          button.btn.btn_search.search__btn
+            svg(width="25" height="25" viewbox="0 0 25 25")
+              use(xlink:href="images/sprite.svg#search")
+          .search__wrapper
+            input.search__field(type="text" placeholder="Что будем искать?")
+            button.btn.btn_close.search__close-btn
+              span.btn_close__inner
+                span.btn_close__line
+                span.btn_close__line
+        ul.social.header__social.grid_header__social
+          li.social__item
+            a.social__link(href="#")
+              svg(width="30" height="30" viewbox="0 0 30 30")
+                use(xlink:href="images/sprite.svg#instagram")
+          li.social__item
+            a.social__link(href="#")
+              svg(width="30" height="30" viewbox="0 0 30 30")
+                use(xlink:href="images/sprite.svg#facebook")
+          li.social__item
+            a.social__link(href="#")
+              svg(width="30" height="30" viewbox="0 0 30 30")
+                use(xlink:href="images/sprite.svg#vk")
+    main.main
+      h1.visually-hidden Фотостудия High Pass
+      section#master-class.section.events
+        h2.visually-hidden Мастер-классы
+        .container.grid.grid_events
+          .grid_events__main-block
+            article.card.card_single
+              picture.card__img.card_single__img
+                source(srcset="images/photocamera-320.webp" media="(max-width: 320px)")
+                source(srcset="images/photocamera-1024.webp" media="(max-width: 576px)")
+                source(srcset="images/photocamera-768.webp" media="(max-width: 768px)")
+                source(srcset="images/photocamera-1024.webp" media="(max-width: 1024px)")
+                source(srcset="images/photocamera.webp")
+                img(src="images/photocamera.webp", alt="Фотокамера")
+              .card__text-wrapper.card_single__text-wrapper
+                h3.heading.card__title.card_single__title Неоновый фотосет 2.0 7&nbsp;июля 20:00
+                p.descr.card__descr.card_single__descr Мастер-класс от Игоря Робова
+                a.btn.btn_basic(href="#") Узнать больше
+                a.hashtag.card__hashtag.card_single__hashtag(href="#") #мастеркласс
+          h3.grid_events__title.events__title.heading Работы участников предыдущего мастер-класса
+          picture.grid_events__big.previos-event__img.grid_basic__big-row
+            source(srcset="images/prew-portrait1-320.webp" media="(max-width: 320px)")
+            source(srcset="images/prew-portrait1-1024.webp" media="(max-width: 576px)")
+            source(srcset="images/prew-portrait1-768.webp" media="(max-width: 768px)")
+            source(srcset="images/prew-portrait1-1024.webp" media="(max-width: 1024px)")
+            source(srcset="images/prew-portrait1.webp")
+            img(src="images/prew-portrait1.webp", alt="Портрет")
+          picture.previos-event__img
+            source(srcset="images/prew-portrait2-320.webp" media="(max-width: 320px)")
+            source(srcset="images/prew-portrait2.webp" media="(max-width: 576px)")
+            source(srcset="images/prew-portrait2-768.webp" media="(max-width: 768px)")
+            source(srcset="images/prew-portrait2-1024.webp" media="(max-width: 1024px)")
+            source(srcset="images/prew-portrait2.webp")
+            img(src="images/prew-portrait2.webp", alt="Портрет")
+          picture.previos-event__img
+            source(srcset="images/prew-portrait3-320.webp" media="(max-width: 320px)")
+            source(srcset="images/prew-portrait3.webp" media="(max-width: 576px)")
+            source(srcset="images/prew-portrait3-768.webp" media="(max-width: 768px)")
+            source(srcset="images/prew-portrait3-1024.webp" media="(max-width: 1024px)")
+            source(srcset="images/prew-portrait3.webp")
+            img(src="images/prew-portrait3.webp", alt="Портрет")
+      section#about-us.section.about-us
+        .container
+          h2.about-us__title.heading О студии
+          .grid.grid_basic
+            .about-us__wrapper
+              p.about-us__descr.descr В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий  фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально&#8209;технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.
+            .about-us__wrapper
+              .about-us__img-wrapper
+              form.about-us__form.subscribe(action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form")
+                h3.subscribe__title.heading.heading_slim Подписаться на рассылку
+                .subscribe__inner
+                  input.field.subscribe__input(type="email" placeholder="E-mail")
+                  input.subscribe__btn.btn.btn_basic(type="submit" value="Отправить")
+      section#projects.section.projects
+        .container
+          h2.projects__title.heading Наши проекты
+          ul.grid.grid_card-list
+            li.grid_card-list__item
+              .card.project__card
+                picture.card__img
+                  source(srcset="images/pr-landscape-320.webp" media="(max-width: 320px)")
+                  source(srcset="images/pr-landscape-768.webp" media="(max-width: 768px)")
+                  source(srcset="images/pr-landscape-1024.webp" media="(max-width: 1024px)")
+                  source(srcset="images/pr-landscape.webp")
+                  img(src="images/pr-landscape.webp", alt="Пейзаж")
+                .card__text-wrapper
+                  h3.visually-hidden Пейзаж
+                  a.descr.card__descr.card__descr_link.js_clamp(href='#') Синтетически, смешаны с&nbsp;не уникальными данными до степени...
+                  time.card__date(datetime="2021-06-16") 16 июня
+                  a.card__hashtag.hashtag(href="#") #пейзаж
+            li.grid_card-list__item
+              .card.project__card
+                picture.card__img
+                  source(srcset="images/pr-portrait1-320.webp" media="(max-width: 320px)")
+                  source(srcset="images/pr-portrait1-768.webp" media="(max-width: 768px)")
+                  source(srcset="images/pr-portrait1-1024.webp" media="(max-width: 1024px)")
+                  source(srcset="images/pr-portrait1.webp")
+                  img(src="images/pr-portrait1.webp", alt="Портрет")
+                .card__text-wrapper
+                  h3.visually-hidden Портрет
+                  a.descr.card__descr.card__descr_link.js_clamp(href='#') В своём стремлении улучшить опыт мы упускаем, что явные...
+                  time.card__date(datetime="2021-05-28") 28 мая
+                  a.card__hashtag.hashtag(href="#") #портрет
+            li.grid_card-list__item.grid_card-list__item_resizable
+              .card.project__card
+                picture.card__img
+                  source(srcset="images/pr-object-320.webp" media="(max-width: 320px)")
+                  source(srcset="images/pr-object-1024.webp" media="(max-width: 576px)")
+                  source(srcset="images/pr-object-768.webp" media="(max-width: 768px)")
+                  source(srcset="images/pr-object-1024.webp" media="(max-width: 1024px)")
+                  source(srcset="images/pr-object.webp")
+                  img(src="images/pr-object.webp", alt="Предмет")
+                .card__text-wrapper
+                  h3.visually-hidden Предмет
+                  a.descr.card__descr.card__descr_link.js_clamp(href='#') Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада
+                  time.card__date(datetime="2021-05-14") 14 мая
+                  a.card__hashtag.hashtag(href="#") #предмет
+            li.grid_card-list__item.grid_card-list__item_big
+              .card.card_full.project__card
+                picture.card__img.card_full__img
+                  source(srcset="images/pr-parse-320.webp" media="(max-width: 576px)")
+                  source(srcset="images/pr-parse-768.webp" media="(max-width: 768px)")
+                  source(srcset="images/pr-parse-1024.webp" media="(max-width: 1024px)")
+                  source(srcset="images/pr-parse.webp")
+                  img(src="images/pr-parse.webp", alt="Семантический разбор")
+                .card__text-wrapper.card_full__text-wrapper
+                  h3.heading.card__title Cемантический разбор
+                  p.descr.card__descr.card_full__descr В рамках спецификации современных стандартов, интерактивные прототипы
+                  time.card__date.card_full__date(datetime="2021-04-09") 9 апреля
+                  a.card__hashtag.hashtag(href="#") #fuji
+                  button.btn.btn_transparent.card__btn О проекте
+            li.grid_card-list__item.grid_card-list__item_big.grid_card-list__item_movable
+              .card.card_full.project__card
+                picture.card__img.card_full__img
+                  source(srcset="images/pr-oblivion-320.webp" media="(max-width: 576px)")
+                  source(srcset="images/pr-oblivion-768.webp" media="(max-width: 768px)")
+                  source(srcset="images/pr-oblivion-1024.webp" media="(max-width: 1024px)")
+                  source(srcset="images/pr-oblivion.webp")
+                  img(src="images/pr-oblivion.webp", alt="Проект забвение")
+                .card__text-wrapper.card_full__text-wrapper
+                  h3.heading.card__title Забвение
+                  p.descr.card__descr.card_full__descr Играет важную роль в формировании глубокомысленных рассуждений
+                  time.card__date.card_full__date(datetime="2021-03-20") 20 марта
+                  a.card__hashtag.hashtag(href="#") #проектзабвение
+                  button.btn.btn_transparent.card__btn О проекте
+            li.grid_card-list__item.grid_card-list__item_middle
+              .card.project__card.card_middle
+                picture.card__img
+                  source(srcset="images/pr-retouch-320.webp" media="(max-width: 320px)")
+                  source(srcset="images/pr-retouch-768.webp" media="(max-width: 768px)")
+                  source(srcset="images/pr-retouch-1024.webp" media="(max-width: 1024px)")
+                  source(srcset="images/pr-retouch.webp")
+                  img(src="images/pr-retouch.webp", alt="Ретушь")
+                .card__text-wrapper
+                  h3.visually-hidden Ретушь
+                  a.descr.card__descr.card__descr_link.card__descr_middle.js_clamp(href='#') Как принято считать, многие известные личности и по сей день остаются уделом либералов...
+                  time.card__date(datetime="2021-03-09") 9 марта
+                  a.card__hashtag.hashtag(href="#") #ретушь
+            li.grid_card-list__item.grid_card-list__item_middle
+              .card.project__card.card_middle
+                picture.card__img
+                  source(srcset="images/pr-portrait2-320.webp" media="(max-width: 320px)")
+                  source(srcset="images/pr-portrait2-768.webp" media="(max-width: 768px)")
+                  source(srcset="images/pr-portrait2-1024.webp" media="(max-width: 1024px)")
+                  source(srcset="images/pr-portrait2.webp")
+                  img(src="images/pr-portrait2.webp", alt="Портрет")
+                .card__text-wrapper
+                  h3.visually-hidden Портрет
+                  a.descr.card__descr.card__descr_link.card__descr_middle.js_clamp(href='#') С учётом сложившейся международной обстановки, новая модель организационной...
+                  time.card__date(datetime="2021-03-01") 1 марта
+                  a.card__hashtag.hashtag(href="#") #портрет
+      section#contacts.section.contacts
+        .container
+          h2.contacts__title.heading Контакты
+          .grid.grid_basic.grid_contacts
+            .contacts__wrapper
+              .map#map
+              .contacts__info
+                h3.contacts__name.heading.heading_slim Студия “High pass”
+                address.contacts__address 107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+                a.tel.contacts__tel(href="tel:+749542423532")
+                  span.tel__img
+                    svg(width="18" height="18" viewbox="0 0 18 18")
+                      use(xlink:href="images/sprite.svg#phone")
+                  span.tel__number +7 (495) 42-423-532
+                button.btn.btn_close.contacts__close-btn
+                  span.btn_close__inner
+                    span.btn_close__line
+                    span.btn_close__line
+              button.btn.btn_info.contacts__info-btn i
+            form.feedback(action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form")
+              h3.heading.heading_slim.feedback__title Оставить заявку
+              span.feedback__descr Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия
+              input.field.feedback__field(type="text", name="Name", placeholder="Имя")
+              input.field.feedback__field(type="email", name="E-mail", placeholder="E-mail")
+              textarea.field.feedback__field.feedback__field_area(name="Comment", placeholder="Комметнарий")
+              input.btn.btn_basic.feedback__submit(type="submit" value="Отправить")
+    footer.footer
+      .container.grid.grid_footer
+        .footer__left
+          a.logo(href="#")
+            svg(width="191" height="32" viewbox="0 0 191 31")
+              use(xlink:href="images/sprite.svg#logo")
+            span.logo__descr Фотостудия High pass® 2018-2020
+        .footer__center
+          p.quote
+            q Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра.
+            cite.quote__author &copy; Имоджен Каннингем
+        .footer__right
+          .social-inner
+            p.social-inner__title Больше интересного:
+            ul.social
+              li.social__item
+                a.social__link(href="#")
+                  svg(width="30" height="30" viewbox="0 0 30 30" fill="#CACACA")
+                    use(xlink:href="images/sprite.svg#instagram")
+              li.social__item
+                a.social__link(href="#")
+                  svg(width="30" height="30" viewbox="0 0 30 30" fill="#CACACA")
+                    use(xlink:href="images/sprite.svg#facebook")
+              li.social__item
+                a.social__link(href="#")
+                  svg(width="30" height="30" viewbox="0 0 30 30" fill="#CACACA")
+                    use(xlink:href="images/sprite.svg#vk")
+

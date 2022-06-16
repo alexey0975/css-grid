@@ -1,0 +1,36 @@
+@mixin linkHoverEff {
+  transition: color 200ms linear, background-color 200ms linear;
+
+  &:hover {
+    color: $detailsColor;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $hoverColor1;
+    color: $basicColor;
+  }
+
+  &:active {
+    background-color: transparent;
+    color: $hoverColor2;
+  }
+}
+
+@mixin svgHoverEff {
+  * {
+    transition: fill 200ms linear;
+  }
+
+  &:hover * {
+    fill: $detailsColor;
+  }
+
+  &:focus * {
+    fill: $hoverColor1;
+  }
+
+  &:active * {
+    fill: $hoverColor2;
+  }
+}

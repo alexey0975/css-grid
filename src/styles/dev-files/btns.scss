@@ -1,0 +1,158 @@
+@import './variables';
+@import './keyframes';
+
+.btn {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: $basicColor;
+  transition: background-color 200ms linear;
+  outline: none;
+
+  &_basic {
+    padding: 15.5px 22px;
+    background-color: $detailsColor;
+
+    &:hover {
+      background-color: $hoverColor1;
+    }
+    &:focus {
+      background-color: $detailsColor;
+      outline: 3px solid $hoverColor2;
+    }
+
+    &:active {
+      background-color: $hoverColor2;
+    }
+  }
+
+  &_transparent {
+    padding: 13px 20px;
+    border: 3px solid $detailsColor;
+
+      &:hover {
+        background-color: $detailsColor;
+      }
+      &:focus {
+        background-color: $hoverColor1;
+        outline: 3px solid $detailsColor;
+      }
+
+      &:active {
+        background-color: $hoverColor2;
+      }
+  }
+
+  &_close {
+    width: 46px;
+    height: 46px;
+    padding: 13px;
+
+    &__inner{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #666666;
+      transition: background-color 200ms linear;
+    }
+
+    &__line {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      width: 12px;
+      height: 1px;
+      background-color: $basicColor;
+      transform: rotate(45deg);
+
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover &__inner {
+      background-color: $detailsColor;
+    }
+
+    &:focus &__inner {
+      background-color: $hoverColor1;
+      outline: 3px solid $detailsColor;
+    }
+
+    &:active &__inner {
+      background-color: $hoverColor2;
+    }
+  }
+
+  &_info {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: $basicColor;
+    background-color: $detailsColor;
+    transition: background-color 200ms linear;
+    animation: pulse 2s ease-in-out infinite;
+
+    &:hover {
+      background-color: $hoverColor1;
+      animation: none;
+    }
+    &:focus {
+      background-color: $detailsColor;
+      outline: 3px solid $hoverColor2;
+      animation: none;
+    }
+
+    &:active {
+      background-color: $hoverColor2;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 22px;
+  height: 22px;
+  padding: 2px 0;
+  &__line {
+    height: 2px;
+    background-color: $basicColor;
+    transition: background-color 200ms linear;
+    &:last-child {
+      transform-origin: left;
+      transform: scaleX(0.5);
+    }
+  }
+
+  &:focus {
+    outline: 3px solid $hoverColor1;
+    outline-offset: 3px;
+  }
+
+  &:focus &__line {
+    background-color: $hoverColor1;
+  }
+
+  &:active &__line,
+  &_active &__line {
+    background-color: $hoverColor2;
+  }
+}
+
+

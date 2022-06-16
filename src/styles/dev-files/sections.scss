@@ -1,0 +1,121 @@
+@import './variables';
+@import './keyframes';
+
+.events {
+  padding-top: 35px;
+  padding-bottom: 67px;
+
+  &__title {
+    margin-bottom: -5px;
+    font-size: 24px;
+    line-height: 1.04;
+  }
+
+  &__article:first-child {
+    margin-top: 8px;
+  }
+}
+
+.about-us {
+  padding-top: 32px;
+  padding-bottom: 70px;
+  color: $basicColor;
+  background-color: $secondaryColor;
+
+  &__title {
+    margin-bottom: 3px;
+  }
+
+  &__descr {
+    padding: 3px 0;
+    line-height: 1.74;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img-wrapper {
+    margin-bottom: 25px;
+    flex: 1 1 auto;
+    background: transparent url('../images/photocamera2.webp') no-repeat center;
+  }
+}
+
+.projects {
+  padding-top: 71px;
+  padding-bottom: 40px;
+
+  &__title {
+    margin-bottom: 11px;
+  }
+}
+
+.contacts {
+  padding-top: 32px;
+  padding-bottom: 68px;
+  &__title {
+    margin-bottom: 17px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 410px;
+    gap: $gutter;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 410px;
+    height: 100%;
+    padding-top: 24px;
+    padding-left: 60px;
+    padding-right: 50px;
+    color: $basicColor;
+    background-color: transparentize($secondaryColor, 0.15);
+    transition: transform .5s ease-in-out;
+    transform: translate(0);
+    z-index: 99;
+
+    &_hidden {
+   animation: move-to-righ .5s ease-in-out reverse;
+      transform: translateX(-101%);
+    }
+  }
+
+  &__name {
+    margin-bottom: 3px;
+  }
+
+  &__address {
+    font-style: normal;
+    line-height: 28px;
+    margin-bottom: 4px;
+    color: darken($basicColor, 20.7);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 11px;
+    right: 7px;
+  }
+
+  &__info-btn {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: none;
+  }
+}

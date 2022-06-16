@@ -1,0 +1,141 @@
+@import './variables.scss';
+@import './mixins.scss';
+.card {
+  position: relative;
+  font-size: 0;
+
+  &__img {
+    height: 100%;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    max-width: 293px;
+    margin-bottom: 6px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__descr {
+    max-width: 293px;
+    margin-bottom: 10px;
+    line-height: 22px;
+
+    &_link {
+      height: 66px;
+      overflow: hidden;
+      @include linkHoverEff;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        content: '';
+      }
+    }
+  }
+
+  &__date {
+    position: relative;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #999999;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 14px;
+      height: 17px;
+      background: url('../images/calendar.svg') left bottom no-repeat;
+      content: '';
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__hashtag {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    color: $basicColor;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+
+  &_full {
+    height: 100%;
+    width: 100%;
+
+    &__text-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      padding: 20px 30px 30px;
+      color: $basicColor;
+    }
+
+    &__img {
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    &__date {
+      margin-bottom: 4px;
+      color: $basicColor;
+      order: -1;
+    }
+  }
+
+  &_single {
+    height: 100%;
+
+    &__img {
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    &__text-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      padding: 60px;
+      padding-right: 145px;
+      justify-content: flex-end;
+      color: $basicColor;
+    }
+
+    &__title {
+      max-width: none;
+      margin-bottom: 20px;
+      font-size: 36px;
+      line-height: 1.04;
+    }
+
+    &__descr {
+      margin-bottom: 2px;
+      order: -1;
+    }
+
+    &__hashtag {
+      top: 21px;
+      right: 15px;
+    }
+  }
+}

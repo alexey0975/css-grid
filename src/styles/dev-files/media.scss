@@ -1,0 +1,706 @@
+@import './variables.scss';
+
+@media (max-width: 1200px) {
+  .contacts {
+    padding-bottom: 67px;
+    &__info {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      width: auto;
+      height: auto;
+      padding-left: 30px;
+      padding-right: 260px;
+      padding-bottom: 22px;
+
+      &_hidden {
+        animation: move-to-righ .5s ease-in-out reverse;
+           transform: translateY(101%);
+         }
+    }
+    &__name {
+      margin-bottom: 6px;
+    }
+
+    &__address {
+      display: inline;
+      margin-bottom: 0;
+      margin-right: 9px;
+    }
+
+    &__info-btn {
+      top: auto;
+      left: auto;
+      bottom: 25px;
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --padding-container: 31px;
+  }
+
+  .header {
+    padding-bottom: 25px;
+    &__social {
+      display: none;
+    }
+  }
+
+  .logo > svg {
+    width: 166px;
+  }
+
+  .search {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .grid {
+    &_header {
+      grid-template-areas: "logo nav search";
+      grid-template-columns: minmax(min-content, 205px) minmax(min-content, 770px) minmax(min-content, 113px);
+    }
+
+    &_card-list {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 285px 307px 307px;
+      row-gap: 24px;
+      &__item {
+        &_resizable {
+          grid-column: span 4;
+        }
+
+        &_big {
+          grid-column: span 5;
+        }
+
+        &_movable {
+          order: 1;
+        }
+      }
+    }
+
+    &_contacts {
+      grid-template-columns: 1fr 342px;
+    }
+
+    &_footer {
+      grid-template-columns: minmax(min-content,342px) minmax(min-content,365px) 1fr;
+    }
+  }
+
+  .events {
+    padding-top: 33px;
+    padding-bottom: 67px;
+  }
+
+  .about-us {
+    padding-bottom: 57px;
+    &__descr {
+      line-height: 1.75;
+    }
+    &__img-wrapper {
+      background-image: url('../images/photocamera2-1024.webp');
+    }
+  }
+
+  .subscribe {
+    padding-bottom: 25px;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__input {
+      max-width: 342px;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+
+    &__btn {
+      align-self: flex-start;
+    }
+  }
+
+  .projects {
+    &__title {
+      margin-bottom: 13px;
+    }
+  }
+
+  .card {
+    &__img {
+      margin-bottom: 19px;
+    }
+
+    &__descr{
+      &_link {
+        max-width: none;
+        height: 44px;
+        margin-bottom: 17.5px;
+      }
+
+      &_middle {
+        height: 66px;
+      }
+    }
+
+    &_single {
+      &__text-wrapper {
+        padding: 30px;
+      }
+      &__title {
+        font-size: 34px;
+      }
+      &__descr {
+        margin-bottom: 5px;
+      }
+      &__hashtag {
+        top: 15px;
+      }
+
+      &__img {
+        margin-bottom: 0;      }
+    }
+    &_full {
+      &__img {
+        margin-bottom: 0;
+      }
+      &__text-wrapper {
+        padding-top: 30px;
+      }
+    }
+  }
+
+  .tel {
+    align-items: baseline;
+    color: $detailsColor;
+    &__img {
+      transform: translateY(3px);
+      * {
+        fill: $detailsColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --padding-container: 27px;
+  }
+
+  .grid {
+    &_header {
+      grid-template-areas: "logo search" "nav nav";
+      grid-template-columns: minmax(min-content, 205px) minmax(min-content, 113px);
+      row-gap: 24px;
+    }
+  }
+
+  .header {
+    padding-bottom: 0;
+  }
+
+  .nav {
+    padding: 12px 23px;
+    margin: 0  -27px;
+    background-color: #4A4A4A;
+  }
+
+  .contacts {
+    &__info {
+      padding-right: 34px;
+    }
+    &__address {
+      display: block;
+      max-width: 436px;
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    &_card-list {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 300px 306px 307px 300px;
+      &__item {
+        &_resizable {
+          grid-column: span 2;
+        }
+
+        &_big {
+          grid-column: span 6;
+        }
+
+        &_movable {
+          order: 1;
+        }
+      }
+    }
+
+    &_contacts {
+      grid-template-columns: 1fr;
+      grid-template-rows: 460px auto;
+    }
+
+    &_footer {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .events {
+    padding-top: 37px;
+
+    &__title {
+      margin-bottom: -14px;
+      font-size: 22px;
+    }
+  }
+
+  .card {
+    &__img {
+      margin-bottom: 17px;
+    }
+
+        &__descr{
+          &_link {
+            height: 63px;
+            margin-bottom: 12px;
+          }
+          &_middle {
+            margin-bottom: 20px;
+          }
+        }
+
+    &_single {
+      &__text-wrapper {
+        padding-left: 28px;
+      }
+      &__title {
+        margin-bottom: 23px;
+        line-height: 0.91;
+      }
+      &__descr {
+        margin-bottom: 13px;
+      }
+      &__img {
+        margin-bottom: 0;
+      }
+    }
+
+    &_full {
+      &__img {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .about-us {
+    padding-bottom: 60px;
+    &__img-wrapper {
+      background-image: url('../images/photocamera2-768.webp');
+    }
+    &__form {
+      padding-bottom: 10px;
+    }
+  }
+
+  .subscribe {
+    &__title {
+      margin-bottom: 18px;
+    }
+  }
+
+  .feedback {
+    max-width: 466px;
+  }
+
+  .footer__center {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --padding-container: 20px;
+  }
+
+  .logo {
+    align-items: center;
+
+    &__descr {
+      margin-top: 0;
+      font-size: 10px;
+      line-height: 1;
+    }
+  }
+
+  .search {
+    &__wrapper {
+      width: 100%;
+    }
+  }
+
+  .grid {
+    &_header {
+      row-gap: 18px;
+    }
+
+    &_basic {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      gap: 27px;
+    }
+
+    &_events {
+      grid-template-columns: 1fr 1fr;
+      &_main-block {
+        grid-row: auto;
+      }
+    }
+
+    &_card-list {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-auto-flow:  row;
+
+      &__item {
+        grid-column: span 1;
+        &_big {
+          grid-column: span 2;
+          margin-bottom: 5px;
+        }
+
+        &_movable {
+          grid-column: span 2;
+          margin-bottom: 0;
+        }
+
+        &_resizable {
+          grid-column: span 2;
+        }
+
+        &_middle {
+          grid-column: span 2;
+        }
+      }
+    }
+
+    &_footer {
+      grid-template-columns: 1fr;
+      row-gap: 28px;
+    }
+  }
+
+  .header {
+    padding-top: 20px;
+  }
+
+  .nav {
+    margin: 0 -20px;
+    &__links {
+      position: absolute;
+      left: 0;
+      top: 1px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 100%;
+      height: 100vh;
+      padding: 55px var(--padding-container) 200px;
+      background-color: $secondaryColor;
+      transform: translateX(-101%);
+      transition: transform 300ms linear;
+      overflow: hidden;
+      z-index: 99;
+
+      &_show {
+        transform: none;
+      }
+    }
+
+    &__list {
+      flex-direction: column;
+      justify-content: start;
+      margin: 0;
+
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+    }
+
+    &__tel {
+      display: block;
+      margin-top: auto;
+    }
+  }
+
+  .burger {
+    display: flex;
+    position: relative;
+    z-index: 100;
+  }
+
+  .contacts {
+    &__wrapper {
+      margin: 0 -20px;
+    }
+  }
+
+  .footer {
+    &__left {
+      justify-self: stretch;
+      order: 1;
+    }
+  }
+
+  .btn {
+    font-size: 14px;
+    &_basic {
+      padding: 10.5px 22px;
+    }
+    &_transparent {
+      padding: 8px 18px;
+    }
+  }
+
+  .card {
+    &__text-wrapper {
+      justify-content: flex-end;;
+    }
+
+    &__btn {
+      margin-top: 0;
+    }
+  }
+
+  .search__btn {
+    > svg {
+      width: 20px;
+    }
+  }
+
+  .subscribe {
+    &__title {
+      margin-bottom: 14px;
+    }
+
+    &__input {
+      padding: 11px 23px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .social-inner {
+    align-items: center;
+
+    .social {
+      padding-right: 0;
+    }
+  }
+
+
+  .events {
+    padding-top: 30px;
+    padding-bottom: 49px;
+    &__article {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__title {
+      padding-top: 2px;
+      margin-bottom: -14px;
+    }
+  }
+
+  .about-us {
+    padding-top: 34px;
+
+    &__descr {
+      line-height: 1.78;
+    }
+
+    &__img-wrapper {
+      min-height: 278px;
+      margin-bottom: 26px;
+      background-image: url('../images/photocamera2-1024.webp');
+    }
+
+    &__form {
+      padding-bottom: 0;
+    }
+
+    .grid {
+      gap: 21px;
+    }
+  }
+
+  .projects {
+    padding-top: 52px;
+    &__title {
+      margin-bottom: 16px;
+    }
+  }
+
+  .contacts {
+    padding-top: 13px;
+    padding-bottom: 51px;
+    &__wrapper {
+      min-height: 472px;
+    }
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__info {
+      padding-left: 18px;
+      padding-bottom: 15px;
+    }
+
+    &__address {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__name {
+      margin-bottom: 11px;
+    }
+  }
+
+  .feedback {
+    &__title {
+      margin-bottom: 14px;
+      line-height: 0.6;
+    }
+
+    &__descr {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    &__field {
+      font-size: 14px;
+      padding: 11.5px 23px;
+    }
+  }
+
+  .footer {
+    padding-top: 32px;
+    padding-bottom: 0;
+    &__left {
+      margin: 0 -20px;
+      padding-top: 7px;
+      padding-bottom: 13px;
+      background-color: #4A4A4A;
+    }
+  }
+
+}
+
+@media (max-width: 320px) {
+  .heading {
+    font-size: 18px;
+  }
+
+  .descr {
+    font-size: 14px;
+  }
+
+  .hashtag {
+    padding: 3px 14px;
+    font-size: 12px;
+  }
+
+  .tel {
+    font-size: 14px;
+  }
+
+  .card {
+    &__hashtag {
+      top: 5px;
+      right: 7px;
+    }
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 9px;
+    }
+
+    &__descr {
+      &_link {
+        height: 42px;
+        font-size: 16px;
+      }
+      &_middle {
+        padding: 0 2px;
+        height: 66px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &_single {
+      &__text-wrapper {
+        padding-bottom: 33px;
+        padding-left: 30px;
+      }
+      &__title {
+        margin-bottom: 15px;
+        line-height: 1.07;
+      }
+      &__descr {
+        margin-bottom: 7px;
+      }
+
+      &__hashtag {
+        padding: 3px 7px;
+      }
+    }
+
+    &_full {
+      &__descr {
+        margin-bottom: 15px;
+        line-height: 19px;
+      }
+      &__date {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .grid {
+    &_card-list {
+      &__item {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  .about-us {
+    &__img-wrapper {
+      min-height: 278px;
+      margin-bottom: 26px;
+      background-image: url('../images/photocamera2-320.webp');
+    }
+  }
+
+  .logo {
+    > svg {
+      width: 113px;
+    }
+  }
+}
